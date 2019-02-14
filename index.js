@@ -23,7 +23,7 @@ function viewCart() {
     for (var i = 0; i < cart.length - 1; i++) {
       statement = statement + `${cart[i]['itemName']} at $${cart[i]['itemPrice']}, `
     }
-  return statement + `${cart[i]['itemName']} at $${cart[i]['itemPrice']}.`
+  return statement + `and ${cart[i]['itemName']} at $${cart[i]['itemPrice']}.`
   }
   else {
     return 'Your shopping cart is empty.'
