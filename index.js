@@ -19,10 +19,15 @@ function addToCart(item) {
 
 function viewCart() { 
   var statement = 'In your cart, you have ';
-  for (var i = 0; i < cart.length - 1; i++) {
-    statement = statement + `${cart[i]['itemName']} at $${cart[i]['itemPrice']}, `
-  }
+  if (cart.length > 0) {
+    for (var i = 0; i < cart.length - 1; i++) {
+      statement = statement + `${cart[i]['itemName']} at $${cart[i]['itemPrice']}, `
+    }
   return statement + `${cart[i]['itemName']} at $${cart[i]['itemPrice']}.`
+  }
+  else {
+    return 'Your shopping cart is empty.'
+  }
 }
 
 function total() {
