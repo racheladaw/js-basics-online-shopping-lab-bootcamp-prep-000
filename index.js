@@ -17,8 +17,12 @@ function addToCart(item) {
   return `${item} has been added to your cart.`
 }
 
-function viewCart() { var statement = 'In your cart, you have ';
-
+function viewCart() { 
+  var statement = 'In your cart, you have ';
+  for (var i = 0; i < cart.length - 1; i++) {
+    statement = statement + `${cart[i]['itemName']} at $${cart[i]['itemPrice']}, `
+  }
+  return statement + `${cart[i]['itemName']} at $${cart[i]['itemPrice']}.`
 }
 
 function total() {
